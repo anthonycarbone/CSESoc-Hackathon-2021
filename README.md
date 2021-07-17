@@ -1,4 +1,5 @@
 # CSESoc-Hackathon-2021
 
 "Yeetasaurous" - Anthony.
-"I only know COBOL" - Sam. 
+"What do you meme?" - Khai.
+"I only know COBOL" - Sam.
