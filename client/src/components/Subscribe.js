@@ -4,6 +4,7 @@ class App extends React.Component {
     constructor () {
         super()
         this.state = {}
+        this.handleClick = this.handleClick.bind(this);
         }        
 
     constructor(props) {
@@ -26,7 +27,7 @@ class App extends React.Component {
         };
     }
 
-    componentDidMount() {
+    handleClick() {
         // Simple POST request with a JSON body using fetch
         const requestOptions = {
             method: 'POST',
@@ -56,8 +57,8 @@ class App extends React.Component {
         var json = JSON.parse(data);
 
         return (
-            <div className="card text-center m-3">
-                <h5 className="card-header">Simple POST Request</h5>
+            <div className="button_box">
+                <button classname='button' onClick={this.handleClick}Subscribe></button>
                 <div className="card-body">
                     link: json.link
                     title: json.title,
