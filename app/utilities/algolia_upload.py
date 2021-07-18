@@ -1,10 +1,11 @@
 import json
 
+import config
 import pandas as pd
 from algoliasearch.search_client import SearchClient
 
-APP_ID = "U5XKVGUK9E"
-API_KEY = "42383009143547ad8d5a2f7f8c5865e1"
+APP_ID = config.ALGOLIA_APP_ID
+API_KEY = config.ALGOLIA_API_KEY
 
 
 def importData(csvPath):
@@ -16,6 +17,6 @@ client = SearchClient.create(APP_ID, API_KEY)
 
 index = client.init_index("schollars")
 
-scholarships = json.loads(importData("app/db.xlsx"))
+scholarships = json.loads(importData("app/data/db.xlsx"))
 
 index.save_objects(scholarships, {"autoGenerateObjectIDIfNotExist": True})
