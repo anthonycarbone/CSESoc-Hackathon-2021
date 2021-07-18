@@ -1,6 +1,6 @@
 import React from 'react'
 
-class App extends React.Component {
+class Subscribe extends React.Component {
     constructor(props) {
         super(props);
 
@@ -86,4 +86,6 @@ class App extends React.Component {
     }
 }
    
-export { PostRequest }; 
+// export { PostRequest }; 
+
+export default Subscribe;

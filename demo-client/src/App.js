@@ -24,11 +24,17 @@ function App() {
         <h1 className="header-title">
           <a href="/">Schollars</a>
         </h1>
+        <div>
+          {/* <Subscribe /> */}
+        </div>
       </header>
 
       <div className="container">
         <InstantSearch searchClient={searchClient} indexName="schollars">
           <div className="search-panel">
+          <div className="search-panel__filters">
+              <RefinementList attribute="benefactor" />
+            </div>
             <div className="search-panel__results">
               <SearchBox
                 className="searchbox"
@@ -36,7 +42,6 @@ function App() {
                   placeholder: 'Search scholarships...',
                 }}
               />
-              <RefinementList attribute="benefactor" />
               <Hits hitComponent={Hit} />
 
               <div className="pagination">
@@ -46,7 +51,6 @@ function App() {
           </div>
         </InstantSearch>
       </div>
-      {/* <Subscribe /> */}
     </div>
   );
 }
