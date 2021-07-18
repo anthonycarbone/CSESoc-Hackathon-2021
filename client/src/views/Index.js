@@ -21,7 +21,7 @@ import React from "react";
 import { Container, Row } from "reactstrap";
 
 // core components
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
+import SchollarsNavbar from "components/Navbars/SchollarsNavbar.js";
 import CardsFooter from "components/Footers/CardsFooter.js";
 
 // index page sections
@@ -46,6 +46,8 @@ import Icons from "./IndexSections/Icons.js";
 import Login from "./IndexSections/Login.js";
 import Download from "./IndexSections/Download.js";
 
+import Search from "./search/Search.js";
+
 class Index extends React.Component {
   componentDidMount() {
     document.documentElement.scrollTop = 0;
@@ -55,18 +57,19 @@ class Index extends React.Component {
   render() {
     return (
       <>
-        <DemoNavbar />
+        <SchollarsNavbar />
         <main ref="main">
           <Hero />
-          <Buttons />
-          <Inputs />
-          <section className="section">
+          <Search />
+          {/* <Buttons /> */}
+          {/* <Inputs /> */}
+          {/* <section className="section">
             <Container>
               <CustomControls />
               <Menus />
             </Container>
-          </section>
-          <Navbars />
+          </section> */}
+          {/* <Navbars />
           <section className="section section-components">
             <Container>
               <Tabs />
@@ -84,9 +87,9 @@ class Index extends React.Component {
               <Datepicker />
               <TooltipPopover />
             </Container>
-          </section>
-          <Carousel />
-          <Icons />
+          </section> */}
+          {/* <Carousel />
+          <Icons /> */}
           <Login />
           <Download />
         </main>
