@@ -32,7 +32,19 @@ class App extends React.Component {
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email: 'johnsmith@gmail.com', number: '04930001111', })
+            body: JSON.stringify({
+                 email: 'johnsmith@gmail.com', 
+                 number: '04930001111', 
+                 faculty: null,
+                 value: null,
+                 isRural: 1,
+                 gender: null,
+                 isLGBT: null,
+                 isIndigenous: null,
+                 hardship: null,
+                 minATAR: null, 
+                 notes: null}),
+            mode: 'cors',
         };
         fetch('https://localhost:3000/subscribe', requestOptions)
             .then(response => response.json())
@@ -80,6 +92,3 @@ class App extends React.Component {
 }
    
 export { PostRequest }; 
-
-
-//React.render(<App />, document.getElementById('root'))
