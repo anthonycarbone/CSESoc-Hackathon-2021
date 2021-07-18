@@ -66,7 +66,7 @@ class App extends React.Component {
     }
 
     render() {
-        var json = JSON.parse(data);
+        var json = JSON.parse(this.state);
 
         return (
             <div className="button_box">
