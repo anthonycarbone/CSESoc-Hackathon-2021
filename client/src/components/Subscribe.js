@@ -1,12 +1,6 @@
 import React from 'react'
 
 class App extends React.Component {
-    constructor () {
-        super()
-        this.state = {}
-        this.handleClick = this.handleClick.bind(this);
-        }        
-
     constructor(props) {
         super(props);
 
@@ -25,6 +19,7 @@ class App extends React.Component {
             minATAR: null, 
             notes: null 
         };
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
